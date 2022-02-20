@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Theory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Other didactic elements</h2>
+<p style="font-size:20px;">
+    1. Definition
+</p>
+<p style="font-size:16px">
+    A filter is a circuit capable of passing (or amplifying) certain frequencies while attenuating other frequencies. Thus, a filter can extract important frequencies from signals that also contain undesirable or irrelevant frequencies. <br />
+    In the field of electronics, there are many practical applications for filters. Examples include:
+    <ul style="font-size:15px">
+        <li> Radio communications: Filters enable radio receivers to only "see" the desired signal while rejecting all other signals (assuming that the other signals have different frequency content). </li>
+        <li> DC power supplies: Filters are used to eliminate undesired high frequencies (i.e., noise) that are present on AC input lines. Additionally, filters are used on a power supply's output to reduce ripple. </li>
+        <li> Audio electronics: A crossover network is a network of filters used to channel low-frequency audio to woofers, mid-range frequencies to midrange speakers, and high-frequency sounds to tweeters. </li>
+        <li> Analog-to-digital conversion: Filters are placed in front of an ADC input to minimize aliasing. </li>
+    </ul>
+</p>
+<p style="font-size:20px;">
+    2. Filters classification
+</p>
+<p style="font-size:16px">
+    The four primary types of filters include the low-pass filter, the high-pass filter, the band-pass filter, and the notch filter (or the band-reject or band-stop filter).
+    <img src="~/Images/Classification.png" /> <br />
+    Filters can be placed in one of two categories: passive or active.
+    <ul style="font-size:15px">
+        <li> Passive implementations of linear filters are based on combinations of resistors (R), inductors (L) and capacitors (C). </li>
+        <li> Active filters are implemented using a combination of passive and active (amplifying) components, and require an outside power source. </li>
+    </ul>
+
+</p>
+
+<p style="font-size:20px;">
+    3. Basic parameters characterizing the filter
+</p>
+<p style="font-size:16px;">
+    Below are some technical terms that are commonly used when describing filter response curves:
+    <ul style="font-size:15px">
+        <li>
+            -3dB Frequency. This term, pronounced "minus 3dB frequency", corresponds to the input frequency that causes the output signal to drop by -3dB relative to the input signal.
+            The -3dB frequency is also referred to as the cutoff frequency, and it is the frequency at which the output power is reduced by one-half (which is why this frequency is also called the "half-power frequency"),
+            or at which the output voltage is the input voltage multiplied by 1/√2 . For low-pass and high-pass filters there is only one -3dB frequency. However, there are two -3dB frequencies for band-pass and notch filters—these are normally referred to as f1 and f2.
+        </li>
+        <li>
+            Center frequency. The center frequency, a term used for band-pass and notch filters, is a central frequency that lies between the upper and lower cutoff frequencies. The center frequency is commonly defined as either the arithmetic mean
+            (see equation below) or the geometric mean of the lower cutoff frequency and the upper cutoff frequency.
+        </li>
+        <li>
+            Bandwidth. The bandwidth is the width of the passband, and the passband is the band of frequencies that do not experience significant attenuation when moving from the input of the filter to the output of the filter.
+        </li>
+        <li>
+            Stopband frequency. This is a particular frequency at which the attenuation reaches a specified value.
+        </li>
+        <li>
+            Quality factor: The quality factor of a filter conveys its damping characteristics. In the time domain, damping corresponds to the amount of oscillation in the system’s step response.
+            In the frequency domain, higher Q corresponds to more (positive or negative) peaking in the system’s magnitude response. For a bandpass or notch filter, Q represents the ratio between the center frequency and the -3dB bandwidth (i.e., the distance between f1 and f2).
+        </li>
+    </ul>
+</p>
+<h2> Derivation of the formula of my filter </h2>
+<img src="~/Images/Transmittance.jpg" style="width:1200px; height:auto;" />
+
+

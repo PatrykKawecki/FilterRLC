@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Charts.Models.FilterModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Resistance1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resistance2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inductance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacitance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.U1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fmin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fmax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOfRows)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resistance1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resistance2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inductance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacitance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.U1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fmin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fmax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumOfRows)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<button style="background-color:chartreuse; cursor:pointer; border-radius:45%; float:right">
+    @Html.ActionLink("Create New", "Create")
+</button>

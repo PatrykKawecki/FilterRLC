@@ -1,0 +1,93 @@
+﻿@model Charts.Models.FilterModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div style="float:left">
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Resistance1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resistance1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resistance2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resistance2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inductance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inductance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacitance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacitance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.U1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.U1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fmin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fmin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fmax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fmax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfRows)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfRows)
+        </dd>
+
+    </dl>
+</div>
+<div class="form-group">
+    <img src="~/Images/RLCimage.png" alt="Block diagram"
+         style="display:block; width:auto; height:auto;
+         margin-left:auto; margin-right:auto" />
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@{
+    <div>
+        <img src=@Url.Action("CreateWaveform", new {id = Model.ID}) alt="Waveform" />
+    </div>
+}
